@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "xzs",
+  "info": {
+    "singularName": "xz",
+    "pluralName": "xzs",
+    "displayName": "xz",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "xzs"
+    },
+    "nameOrders": {
+      "type": "string"
+    },
+    "users_permissions_users_providers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "xzss"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
